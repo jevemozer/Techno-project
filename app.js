@@ -4,7 +4,7 @@ const vm = new Vue({
     produtos: [],
   },
   methods: {
-    fechtProdutos() {
+    fetchProdutos() {
       fetch("./api/produtos.json")
         .then((r) => r.json())
         .then((r) => {
@@ -13,6 +13,6 @@ const vm = new Vue({
     },
   },
   created() {
-    this.fechtProdutos();
+    this.fetchProdutos();
   },
 });
